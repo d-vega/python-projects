@@ -1,4 +1,4 @@
 # python-projects
-### Welcome to my personal repository for all my Python projects.
+### Welcome to my Python repository!
 
-Check them out.
+This is a repo of all my personal Python projects.
