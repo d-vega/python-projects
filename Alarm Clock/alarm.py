@@ -72,7 +72,6 @@ except IOError:
     YT_FILE.close()
     print 'Success! "YT.txt" has been created.'
     YT_FILE = open('YT.txt', 'r')
-    LINKS = []
     separate_links(YT_FILE)
 else:
     separate_links(YT_FILE)

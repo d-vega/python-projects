@@ -12,6 +12,10 @@ AICHOICE = random.choice(GAMEOPTIONS)
 RESULT = 'The computer chose [{}]!'.format(AICHOICE)
 BADCHOICE = ("Sorry, that\'s not an option.\n"
              "Please try again with: [rock, paper, or scissors]\n")
+WINNER = 'You win!'
+DRAW = 'It\'s a draw!'
+LOSS = 'Sorry, you lost. Better luck next time!'
+
 
 while USERCHOICE not in GAMEOPTIONS:
     print BADCHOICE
@@ -19,19 +23,14 @@ while USERCHOICE not in GAMEOPTIONS:
     if newchoice in GAMEOPTIONS:
         USERCHOICE = newchoice
 
-    
+
 if USERCHOICE == 'rock' and AICHOICE == 'scissors':
-    print RESULT
-    print 'You win!'
+    print RESULT + '\n' + WINNER
 elif USERCHOICE == 'paper' and AICHOICE == 'rock':
-    print RESULT
-    print 'You win!'
+    print RESULT + '\n' + WINNER
 elif USERCHOICE == 'scissors' and AICHOICE == 'paper':
-    print RESULT
-    print 'You win!'
+    print RESULT + '\n' + WINNER
 elif USERCHOICE == AICHOICE:
-    print RESULT
-    print 'It\'s a draw!'
+    print RESULT + '\n' + DRAW
 else:
-    print RESULT
-    print 'Sorry, you lost. Better luck next time!'
+    print RESULT + '\n' + LOSS
