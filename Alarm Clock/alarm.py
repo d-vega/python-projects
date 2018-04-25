@@ -23,6 +23,23 @@ LINKS = []
 print '\nYour alarm has been set to go off at {}.\n'.format(ALARMSET)
 
 
+def open_alarm_link(link_names):
+    """Simple function that will open a random URL from your YT.txt file.
+
+    Args:
+        link_names (str, var): This will be the str or var containing the URL's
+            from the YT.txt file.
+
+    Returns:
+        openurl (function): This will open up a random URL from the YT.txt file
+            in your default web browser.
+    """
+    print GO_OFF
+    time.sleep(1)
+    openurl = webbrowser.open_new_tab(random.choice(link_names))
+    return openurl
+
+
 def separate_links(opened_file):
     """This function will separate the URL links in the 'YT.txt' file. The
     output is then used later to choose a link at random for when the alarm sets
@@ -59,23 +76,6 @@ except IOError:
     separate_links(YT_FILE)
 else:
     separate_links(YT_FILE)
-
-
-def open_alarm_link(link_names):
-    """Simple function that will open a random URL from your YT.txt file.
-
-    Args:
-        link_names (str, var): This will be the str or var containing the URL's
-            from the YT.txt file.
-
-    Returns:
-        openurl (function): This will open up a random URL from the YT.txt file
-            in your default web browser.
-    """
-    print GO_OFF
-    time.sleep(1)
-    openurl = webbrowser.open_new_tab(random.choice(link_names))
-    return openurl
 
 
 if TIME == ALARMSET:
